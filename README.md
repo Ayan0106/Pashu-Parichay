@@ -6,21 +6,18 @@ The project is designed as a practical computer vision solution for applications
 
 ---
 
-## Key Features
+> **Key Features**
 
 * **Breed Recognition from Images**
-* Deep learning-based image classification using **ConvNeXt-Tiny**
-* Data augmentation for improved generalization
-* Training and validation performance monitoring
+* Deep learning-based image classification using **CNN Model**
+* Data augmentation, Training and validation performance monitoring
 * Confusion matrix analysis
 * **Grad-CAM explainability**
 * Confidence score for predictions
-* Exportable PyTorch model checkpoint
-* GPU-accelerated training support
 
 ---
 
-## 🎯 Problem Statement
+## Problem Statement
 
 Identifying livestock breeds manually can require significant domain knowledge and may become difficult when dealing with visually similar breeds.
 
@@ -37,7 +34,7 @@ The system can potentially support:
 
 ---
 
-## 🧠 System Overview
+## System Overview
 
 The current machine learning pipeline follows the workflow:
 
@@ -99,7 +96,7 @@ The original classification head is replaced with a new linear layer correspondi
 
 ---
 
-## 🔄 Data Preprocessing
+## Data Preprocessing
 
 ### Training Transformations
 
@@ -208,43 +205,9 @@ Predicted Breed : Jersey
 Confidence      : 93.09%
 ```
 
-## Project Structure
+---
 
-Recommended repository structure:
-
-```text
-Pashu-Parichay/
-│
-├── README.md
-├── requirements.txt
-├── .gitignore
-│
-├── notebooks/
-│   └── pashuparichay.ipynb
-│
-├── src/
-│   ├── train.py
-│   ├── predict.py
-│   └── gradcam.py
-│
-├── models/
-│   └── README.md
-│
-├── results/
-│   ├── training_curves.jpeg
-│   ├── confusion_matrix.jpeg
-│   └── gradcam_examples/
-│
-├── assets/
-│   ├── architecture.jpeg
-│   └── demo.jpeg
-│
-└── app/
-    └── application source code
-```
-
-
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the repository
 
@@ -311,20 +274,6 @@ The project currently evaluates the model using:
 * Grad-CAM visual explanations
 
 The confusion matrix helps identify breeds that are frequently confused with each other and can guide future dataset and model improvements.
-
----
-
-## Current Limitations
-
-The current implementation has several limitations:
-
-1. The evaluation uses a train/validation split rather than a completely independent test set.
-2. The model shows a noticeable training-validation accuracy gap, suggesting overfitting.
-3. Breed recognition performance may decrease for images with poor lighting, unusual viewpoints, occlusion, or backgrounds different from the training data.
-4. Visually similar breeds can be difficult to distinguish.
-5. The current notebook is Kaggle-oriented and requires path/configuration cleanup for fully reproducible local execution.
-6. The dataset and trained weights are not distributed directly with the repository.
-7. Model predictions should be treated as AI-assisted predictions rather than definitive veterinary or breed certification.
 
 ---
 
