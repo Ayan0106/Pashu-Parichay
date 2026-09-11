@@ -1,6 +1,4 @@
-# 🐄 Pashu Parichay
-
-### Image-Based Indian Cattle & Buffalo Breed Recognition
+# Pashu Parichay: Image-Based Indian Cattle & Buffalo Breed Recognition
 
 **Pashu Parichay** is an AI-powered computer vision system designed to recognize Indian cattle and buffalo breeds from photographs. The project uses deep learning-based image classification to predict the breed of an animal from an input image and provides **Grad-CAM visual explanations** to highlight the regions that influenced the model's prediction.
 
@@ -197,18 +195,18 @@ This provides a visual indication of where the model is focusing when making its
 
 ## 🖼️ Example Prediction
 
-The inference pipeline supports predictions such as:
+The trained model can predict the breed of an input livestock image and provide a confidence score. To improve interpretability, Pashu Parichay also uses Grad-CAM to visualize the regions that influenced the model's prediction.
+
+### Jersey Cattle
+
+![Jersey cattle breed prediction with Grad-CAM](assets/jersey_prediction.png)
+
+**Prediction Result**
 
 ```text
-Predicted Breed : Gir
-Confidence      : XX.XX%
+Predicted Breed : Jersey
+Confidence      : 93.09%
 ```
-
-along with a corresponding Grad-CAM visualization.
-
-> Add your actual prediction screenshots and Grad-CAM outputs to the `results/` or `assets/` directory before publishing the repository.
-
----
 
 ## 📁 Project Structure
 
@@ -245,7 +243,6 @@ Pashu-Parichay/
     └── application source code
 ```
 
----
 
 ## 🚀 Getting Started
 
