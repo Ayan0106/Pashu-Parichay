@@ -199,7 +199,7 @@ The trained model can predict the breed of an input livestock image and provide 
 
 ### Jersey Cattle
 
-![Jersey cattle breed prediction with Grad-CAM](assets/jersey_prediction.png)
+![Jersey cattle breed prediction with Grad-CAM](assets/jersey_prediction.jpeg)
 
 **Prediction Result**
 
@@ -231,13 +231,13 @@ Pashu-Parichay/
 │   └── README.md
 │
 ├── results/
-│   ├── training_curves.png
-│   ├── confusion_matrix.png
+│   ├── training_curves.jpeg
+│   ├── confusion_matrix.jpeg
 │   └── gradcam_examples/
 │
 ├── assets/
-│   ├── architecture.png
-│   └── demo.png
+│   ├── architecture.jpeg
+│   └── demo.jpeg
 │
 └── app/
     └── application source code
