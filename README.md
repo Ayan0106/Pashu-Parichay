@@ -6,17 +6,17 @@ The project is designed as a practical computer vision solution for applications
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-* 🐄 **Breed Recognition from Images**
-* 🧠 Deep learning-based image classification using **ConvNeXt-Tiny**
-* 🔄 Data augmentation for improved generalization
-* 📊 Training and validation performance monitoring
-* 🧩 Confusion matrix analysis
-* 🔥 **Grad-CAM explainability**
-* 🎯 Confidence score for predictions
-* 💾 Exportable PyTorch model checkpoint
-* ⚡ GPU-accelerated training support
+* **Breed Recognition from Images**
+* Deep learning-based image classification using **ConvNeXt-Tiny**
+* Data augmentation for improved generalization
+* Training and validation performance monitoring
+* Confusion matrix analysis
+* **Grad-CAM explainability**
+* Confidence score for predictions
+* Exportable PyTorch model checkpoint
+* GPU-accelerated training support
 
 ---
 
@@ -72,7 +72,7 @@ The current machine learning pipeline follows the workflow:
 
 ---
 
-## 🏗️ Model Architecture
+## Model Architecture
 
 The current implementation uses **ConvNeXt-Tiny** with pretrained weights.
 
@@ -124,7 +124,7 @@ The dataset is loaded using PyTorch's `ImageFolder`, where each breed is represe
 
 ---
 
-## 📊 Training Results
+## Training Results
 
 The current training run was performed for **30 epochs**.
 
@@ -155,7 +155,7 @@ The difference between training and validation accuracy indicates that the curre
 
 ---
 
-## 🔥 Explainability with Grad-CAM
+## Explainability with Grad-CAM
 
 Pashu Parichay incorporates **Gradient-weighted Class Activation Mapping (Grad-CAM)** to make model predictions more interpretable.
 
@@ -193,7 +193,7 @@ This provides a visual indication of where the model is focusing when making its
 
 ---
 
-## 🖼️ Example Prediction
+## Example Prediction
 
 The trained model can predict the breed of an input livestock image and provide a confidence score. To improve interpretability, Pashu Parichay also uses Grad-CAM to visualize the regions that influenced the model's prediction.
 
@@ -208,7 +208,7 @@ Predicted Breed : Jersey
 Confidence      : 93.09%
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 Recommended repository structure:
 
@@ -299,64 +299,7 @@ The project uses PyTorch `ImageFolder`, so each directory represents one classif
 
 ---
 
-## 🏋️ Training
-
-Run:
-
-```bash
-python src/train.py --data_dir data/Indian_bovine_breeds
-```
-
-The training pipeline:
-
-1. Loads the dataset
-2. Creates an 80/20 train-validation split
-3. Applies image preprocessing and augmentation
-4. Initializes ConvNeXt-Tiny
-5. Replaces the classification head
-6. Trains using AdamW
-7. Applies cosine learning-rate scheduling
-8. Tracks training/validation loss and accuracy
-9. Restores the best validation model
-10. Saves the trained model checkpoint
-
----
-
-## 🔮 Prediction
-
-After training, an image can be passed to the inference pipeline:
-
-```bash
-python src/predict.py --image path/to/image.jpg
-```
-
-Example output:
-
-```text
-Predicted Breed : Gir
-Confidence      : 87.42%
-```
-
----
-
-## 💾 Model Checkpoint
-
-The trained model is exported as a PyTorch checkpoint containing:
-
-```python
-{
-    "model_state": model.state_dict(),
-    "class_names": class_names
-}
-```
-
-This allows the model weights and corresponding class mapping to be restored for inference.
-
-Large model files should preferably be distributed through GitHub Releases, Hugging Face Hub, or another suitable model-storage service rather than committed directly to the repository.
-
----
-
-## 🧪 Evaluation
+## Evaluation
 
 The project currently evaluates the model using:
 
@@ -371,7 +314,7 @@ The confusion matrix helps identify breeds that are frequently confused with eac
 
 ---
 
-## ⚠️ Current Limitations
+## Current Limitations
 
 The current implementation has several limitations:
 
@@ -385,7 +328,7 @@ The current implementation has several limitations:
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
 Planned improvements include:
 
@@ -406,33 +349,7 @@ Planned improvements include:
 
 ---
 
-## 🛠️ Tech Stack
-
-### Machine Learning
-
-* Python
-* PyTorch
-* Torchvision
-* ConvNeXt-Tiny
-* OpenCV
-* NumPy
-* scikit-learn
-
-### Visualization
-
-* Matplotlib
-* Seaborn
-
-### Development
-
-* Jupyter Notebook
-* Kaggle GPU
-* Git
-* GitHub
-
----
-
-## 🎓 Project Context
+## Project Context
 
 **Pashu Parichay** is a computer vision project focused on applying deep learning to livestock breed recognition.
 
@@ -440,14 +357,9 @@ The project explores how image classification and explainable AI can be combined
 
 ---
 
-## ⭐ Acknowledgements
+## Acknowledgements
 
 * PyTorch and Torchvision for the deep learning framework
 * The creators/providers of the Indian bovine breed dataset used for training
 * The open-source computer vision and machine learning community
 
----
-
-## 📌 Disclaimer
-
-Pashu Parichay is an AI-based breed recognition system developed for educational and research purposes. Predictions may be incorrect, particularly for visually similar breeds or images outside the training distribution. The system should not be considered a substitute for professional veterinary, livestock, or breed-certification expertise.
